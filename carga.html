@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/estilo_index.css">
+    <title>Inventario de Excursiones</title>
+</head>
+<body>
+    <main>
+
+        <form action="" id="cargainventario">
+            <fieldset>
+                <legend>Carga de Inventario</legend>
+                <label for="codigo">Codigo</label><input type="number" class="form-control" aria-label="codigo" placeholder="Ingrese el codigo" name="codigo" id="codigo" aria-describedby="basic-addon1">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" class="form-control" aria-label="descripcion" placeholder="Ingrese la descripcion" name="descripcion" id="descripcion">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" class="form-control" aria-label="cantidad" placeholder="Ingrese la cantidad" name="cantidad" id="cantidad">
+                <label for="precio">Precio</label>
+                <input type="number" class="form-control" aria-label="codigo" placeholder="Ingrese el precio" name="precio" id="precio">
+                <br>
+                <button type="submit" class="btn btn-primary">Agregar Excursion</button>
+                <a href="inventario.html" role="button" class="btn btn-secondary" target="_self">Adm de Inventario</a>
+            </fieldset>
+        </form>
+        <script src="js/vue.js"></script>
+        <script src="js/agregar.js"></script>
+    </main>
+</body>
+</html>

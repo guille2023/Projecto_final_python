@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="css/estilo_index.css">
+        <title>Inventario</title>
+    </head>
+</head>
+
+
+<body>
+    <div id="app">
+        <div id="cargainventario">
+
+            <h1>Carrito de compras</h1>
+            <h3>Excursiones</h3>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Carrito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="excursion in excursiones" :key="excursion.codigo">
+                        <td>{{ excursion.codigo }}</td>
+                        <td>{{ excursion.descripcion }}</td>
+                        <td align="right">{{ excursion.cantidad }}</td>
+                        <td align="right">&nbsp; &nbsp; {{ excursion.precio }}</td>
+                        <td>
+                            <button @click="agregarAlCarrito(excursion)" class="btn btn-info">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</button>
+                        <button @click="quitarDelCarrito(excursion)" class="btn btn-danger">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <div v-if="mostrarCarrito">
+            <h3>Excursiones en el Carrito</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in carrito" :key="item.codigo">
+                        <td>{{ item.codigo }}</td>
+                        <td>{{ item.descripcion }}</td>
+                        <td align="right">{{ item.cantidad }}</td>
+                        <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <div v-if="!mostrarCarrito" class="contenedor-centrado">
+           
+        </div><br>
+        
+        
+        <div class="contenedor-centrado">
+            <a href="Turismo copy.html" role="button" class="btn btn-secondary">Volver a Excursiones</a>
+            
+        </div>
+        
+    </div>
+    
+    
+    <script src="js/carritos.js"></script>
+    <script src="adminis.js"></script>
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url(../img/02.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+.contenedor-centrado {
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.menuAdmin{
+    color: blue;
+}
+a{
+    margin:2px;
+}
+#cargainventario{
+    border: 2px inset silver;
+    padding: 10px;
+    color:darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#clima {
+    background-color: silver;
+    opacity: 95%;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono {
+    height: 3em;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 5em;
+}
+
+.tit1,
+.tit2,
+aside {
+    text-align: center;
+    width: 30%;
+    height: 32em;
+    border: 3px inset silver;
+    margin-top: 0em;
+    overflow: auto;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.equi,
+#img2 {
+    width: 95%;
+    height: 35%;
+    margin-bottom: 1em;
+}
+
+p,
+ol {
+    padding-top: 0.3em;
+    font-size: 1em;
+}
+
+
+iframe {
+    width: 100%;
+    height: 80%;
+    padding: 0.6em;
+}
+
+.gracias {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 3px inset silver;
+    padding: 2em;
+}
+
+.slider-frame {
+    width: 80%;
+    height: auto;
+    margin: 3.125em auto 0;
+    overflow: hidden;
+    border: 3px inset silver;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .head{
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .slider-frame {
+        width: 22em;
+        height: auto;
+        margin: 3.125em auto 0;
+        overflow: hidden;
+        border: 3px inset silver;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+    }
+
+    .tit1,
+    .tit2,
+    aside {
+        width: 100%;
+        margin-bottom: 4em;
+        padding-bottom: 6em;
+        height: fit-content;
+    }
+
+    aside {
+        height: fit-content;
+    }
+
+    #clima {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: small;
+    }
+
+    .logo {
+        height: 15em;
+    }
+    #derechosreservados {
+        font-size: 1em;
+        padding: 0px;
+        margin-left: 0px;
+        width:60%;
+        
+    }
+    #pie{
+        padding: 0.8em;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .head{
+        text-align: center;
+    }
+    #clima {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: medium;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .slider-frame {
+        width: 90%;
+        height: auto;
+        margin: 3.125em auto 0;
+        overflow: hidden;
+        border: 3px inset silver;
+    }
+
+    .cont {
+        display: grid;
+        grid-template-areas: 'c1 .'
+            'c1 vid'
+            'c2 vid';
+        gap: 1em;
+    }
+
+    .tit1 {
+        grid-area: c1;
+    }
+
+    .tit2 {
+        grid-area: c2;
+    }
+
+    aside {
+        margin-top: 20em;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tit1,
+    .tit2 {
+        width: 100%;
+    }
+    }
+@media screen and (min-width: 768px) {
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 10em;
+    }
+    
+    
+    nav {
+        background-color: silver;
+        opacity: 95%;
+    
+    }
+    
+    .navbar {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    ol {
+        list-style: none;
+    }
+    
+    a {
+        font-size: 1.2em;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        font-style: italic;
+    }
+    
+    #clima {
+        background-color: silver;
+        opacity: 95%;
+        font-weight: bold;
+        color: white;
+        font-size: 1rem;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .icono {
+        height: 3em;
+    }
+    
+    .cont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 5em;
+    }
+    
+    .tit1,
+    .tit2,
+    aside {
+        text-align: center;
+        width: 30%;
+        height: 32em;
+        border: 3px inset silver;
+        margin-top: 0em;
+        overflow: auto;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+    .equi,
+    #img2 {
+        width: 95%;
+        height: 35%;
+        margin-bottom: 1em;
+    }
+    
+    p,
+    ol {
+        padding-top: 0.3em;
+        font-size: 1em;
+    }
+    
+    
+    iframe {
+        width: 100%;
+        height: 80%;
+        padding: 0.6em;
+    }
+    
+    .gracias {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 3px inset silver;
+        padding: 2em;
+    }
+    
+    
+}

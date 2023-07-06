@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icono/avion (1).png" type="image/x-icon">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Front Trips</title>
+    <link rel="stylesheet" href="css/footeryhead.css">
+    <link rel="stylesheet" href="css/estilo_index.css">
+</head>
+
+<body>
+    <ul id="clima">
+        <li>Ciudad Autonoma de Buenos Aires</li>
+        <li v-for="tiempo in weather">Estado del Clima: {{tiempo.description}}</li>
+        <li>Temperatura: {{main.temp}}ºC</li>
+        <li v-for="tiempo in weather" :key="tiempo.icon">
+            <img :src="`https://openweathermap.org/img/wn/${tiempo.icon}@2x.png`" alt="icon" class="icono">
+        </li>
+        <script src="js/appclima.js"></script>
+    </ul>
+    <header id="cabeza">
+    </header>
+    <main>
+        <div class="slider-frame">
+            <ul class="imagenes">
+                <li><img src="img/slider1.jpg" alt="slider1"></li>
+                <li><img src="img/slider2.jpg" alt="slider2"></li>
+                <li><img src="img/slider3.jpg" alt="slider3"></li>
+                <li><img src="img/slider4.jpg" alt="slider4"></li>
+            </ul>
+        </div>
+        <div class="cont">
+            <article class="tit1">
+                <h3>Nosotros</h3>
+                <img src="img/equipo.jpg" alt="equipo" class="equi">
+                <p> Somos la Agencia de Viajes Front Trips y ponemos a su disposición toda una gama de opciones
+                    orientadas a ofrecer el mayor bienestar
+                    y placer en la realización de diferentes viajes hacia nuestro país.</p>
+                <ol>
+                    <li>Paquetes turísticos en Buenos Aires y alrdedores.</li>
+                    <li>Organización de eventos.</li>
+                    <li>Alquiler de transporte.</li>
+                    <li>Recorridos turísticos con guías expertos.</li>
+                </ol>
+            </article>
+            <aside>
+                <h3>Visitá Buenos Aires</h3>
+                <iframe src="https://www.youtube.com/embed/rNEhC_i6NiM"
+                    title="QUÉ HACER EN BUENOS AIRES 2023 | 10 LUGARES IMPERDIBLES GUÍA DE VIAJE | ARGENTINA | Gustavo Eduardo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </aside>
+            <article class="tit2">
+                <h3>Podés contar con nuestro equipo</h3>
+                <img src="img/asesoramiento.jpg" alt="asesoramiento" id="img2">
+                <p>Contamos con un equipo de trabajo compuesto por personal profesional especializado, además de una
+                    flota de transporte totalmente acondicionada para ofrecerles el confort que se merecen. Nuestra meta
+                    es proporcionarles un servicio personalizado, con precios competitivos y una calidad humana que
+                    jamás olvidarán.</p>
+            </article>
+        </div>
+        <article class="gracias">
+        <h3>Gracias por elegirnos</h3>
+        <p>De antemano, les expresamos nuestro más sincero agradecimiento por preferirnos. Les deseamos éxitos
+            en sus planes y esperamos vernos pronto.</p>
+    </article>
+
+
+    </main>
+    <footer id="pie">
+        <div>
+            <a href="https://wa.me/5491169950277"><img src="img/logowhatsapp.svg" class="ws_logo"
+                    alt="Logo de Whats app"></a>
+        </div>
+        <h3 class="tituloFooter">Visita nuestras redes</h3>
+        <ul class="redes_footer">
+            <li><a href=""><img src="img/logofacebook.svg" class="logos" alt="Logo de Facebook"></a></li>
+            <li><a href=""><img src="img/logoemail.svg" class="logos" alt="Logo de Gmail"></a></li>
+            <li><a href=""><img src="./img/logoinstagram.svg" class="logos" alt="Logo de Instagram"></a></li>
+        </ul>
+        <ul class="redes_footer">
+            <li class="condiciones-generales">Condiciones Generales</li>
+            <li class="politica-seguridad">Politica de Seguridad</li>
+            <li class="terminos-condiciones">Terminos y condiciones de uso</li>
+        </ul>
+        <div class="div-footer">
+        </div>
+        <div id="pie-animacion">
+            <script src="js/footeryhead.js"></script>
+        </div>
+    </footer>
+</body>
+
+</html>
